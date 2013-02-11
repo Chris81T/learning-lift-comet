@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<title>Home</title>
+</head>
+<body class="lift:content_id=main">
+<div id="main" class="lift:surround?with=default;at=content">
+
+    <header><h4>This is a site to tweet to follower's</h4></header>
+    <section>	
+		<h4 class="subheader">Follower's</h4>
+		<ul data-lift="Tweet.followers">
+			<li><span name="follower"></span></li>
+		</ul>
+    </section>
+
+    <div data-lift="comet?type=sub.UserActor">
+        <section>
+            <h4 class="subheader">List of all user's who are online</h4>
+                <ul id="onlineUsers">
+                    <li><span name="who"></span></li>
+                </ul>
+                <span id="allOffline">nobody is online!</span>
+        </section>
+
+        <section>
+            <h4 class="subheader">List of all pushed tweet's</h4>
+            <ul id="allTweets">
+                <li>User <span name="user"></span> has tweeted: <span name="tweetMsg"></span></li>
+            </ul>
+            <span id="emptyList">no tweets available for you!</span>
+        </section>
+    </div>
+
+    <form data-lift="form.ajax">
+		<h4 class="subheader">Tweet something new to your follower's</h4>
+	    <section data-lift="Tweet.tweet">
+	    	<input id="tweetIn" type="text"></input>
+	    	<button id="tweetSubmit" class="large button">Tweet</button>
+	    </section>
+    </form>
+    
+</div>      
+</body>
+</html>
+
